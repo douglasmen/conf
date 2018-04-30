@@ -1,2 +1,3 @@
 # delivery-configs
-Arquivos de configuração do projeto Delivery
+Arquivos de configuração do projeto Delivery 
+ 
