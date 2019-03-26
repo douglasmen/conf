@@ -1,4 +1,4 @@
-server:
+erver:
   port: 9093
 
 eureka:
@@ -13,5 +13,25 @@ eureka:
   server:
     wait-time-in-ms-when-sync-empty: 3000
 
+spring:
+    datasource:
+        data: classpath:/sql/data.sql
+        driver-class-name: org.h2.Driver
+        password: '1234'
+        platform: h2
+        schema: classpath:/sql/schema.sql
+        url: jdbc:h2:file:~/deploy-manager/h2db/h2_database
+        username: root
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        generate-ddl: false
+        hibernate:
+            ddl-auto: none
+        show-sql: true
+
 authserver:
   hostname: http://localhost:9092
+security:
+  oauth2:
+    resource:
+      userInfoUri: ${authserver.hostname}/user
