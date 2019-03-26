@@ -4,7 +4,7 @@ server:
 eureka:
   instance:
     hostname: localHost
-    secure-port: 9091
+    port: 9091
   client:
     registerWithEureka: true
     fetchRegistry: false
