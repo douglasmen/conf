@@ -15,11 +15,9 @@ eureka:
 
 spring:
     datasource:
-        data: classpath:/sql/data.sql
         driver-class-name: org.h2.Driver
         password: '1234'
         platform: h2
-        schema: classpath:/sql/schema.sql
         url: jdbc:h2:file:~/deploy-manager/h2db/h2_database
         username: root
     jpa:
